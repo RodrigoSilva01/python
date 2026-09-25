@@ -3,9 +3,9 @@ nota2 = float(input('Insira a nota do aluno: '))
 media = (nota1 + nota2) / 2
 
 if media < 5.0:
-    print(f'REPROVADO, sua média é {media}.')
-elif 5.0 <= media <= 6.9:
-    print(f'RECUPERAÇÃO, sua média é {media}.')
+    print(f'REPROVADO, sua média é {media:.1f}')
+elif 5.0 <= media < 7:
+    print(f'RECUPERAÇÃO, sua média é {media:.1f}')
 else: 
     media >= 7.0 
-    print(f'APROVADO, sua média é {media}.')
+    print(f'APROVADO, sua média é {media:.1f}')

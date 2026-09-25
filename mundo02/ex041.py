@@ -1,12 +1,17 @@
-idade = int(input('Insira sua idade: '))
+from datetime import date
+
+atual = date.today().year
+nascimento = int(input('Insira seu ano de nascimento: '))
+idade = atual - nascimento
+print(f'Você nasceu no ano de {nascimento}')
 
 if idade <= 9:
     print(f'Sua idade é de {idade} anos, sua categoria é MIRIM!')
-elif 9 < idade <= 14:
+elif idade <= 14:
     print(f'Sua idade é de {idade} anos, sua categoria é INFANTIL!')
-elif 14 < idade <= 19:
+elif idade <= 19:
     print(f'Sua idade é de {idade} anos, sua categoria é JUNIOR!')
-elif 19 < idade <= 20:
+elif idade <= 25:
     print(f'Sua idade é de {idade} anos, Sua categoria é SÊNIOR!')
 else:
     print(f'Sua idade é de {idade} anos, sua categoria é MASTER!')

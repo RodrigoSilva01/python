@@ -1,7 +1,10 @@
 from datetime import date
 
+atual = date.today().year
 ano_nasc = int(input('Insira seu ano de nascimento: '))
-idade = date.today().year - ano_nasc
+idade = atual - ano_nasc
+
+opcao = int(input('sua opção: '))
 
 if idade < 18:
     tempo_falta = 18 - idade

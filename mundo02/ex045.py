@@ -1,4 +1,5 @@
 import random
+from time import sleep
 
 jogadas = ('pedra', 'papel', 'tesoura')
 
@@ -11,7 +12,11 @@ while True:
     print('[sair]')
 
     opcao = input('Sua opção: ').strip().lower()
-    print('Calculando resultado...')
+    print('JO')
+    sleep(1)
+    print('KEN')
+    sleep(1)
+    print('PÔ!!!')
 
     if opcao == 'sair':
         print('Obrigado por jogar! Até a próxima.')

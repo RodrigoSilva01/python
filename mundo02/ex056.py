@@ -3,7 +3,6 @@ maior = 0
 nome_velho = ''
 mulher_sub20 = 0
 
-
 for c in range(1, 5):
     nome = str(input('Insira seu nome: ')).strip()
     idade = int(input('Insira sua idade: '))

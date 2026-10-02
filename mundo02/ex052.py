@@ -1,17 +1,14 @@
-from math import sqrt
-
 num = int(input('Digite um número: '))
-
-if num <= 1:
-    primo = False
+tot = 0 
+for c in range(1, num + 1):
+    if num % c == 0:
+        print('\033[33m', end=' ')
+        tot = tot + 1   
+    else:
+        print('\033[31m', end=' ')
+    print(f'{c}', end=' ')
+print(f'\n\033[m0 número {num} é foi divisivel {tot} vezes')
+if tot == 2:
+    print('E por isso ele É PRIMO!')
 else:
-    primo = True
-    limite = int(sqrt(num)) + 1
-    for c in range(2, limite):
-        if num % c == 0: 
-            primo = False
-            break
-if primo:
-    print(f'O número {num} é primo!')
-else:
-    print(f'O número {num} não é primo!')
+    print('E por isso ele NÃO É PRIMO!')

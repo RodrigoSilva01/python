@@ -1,11 +1,14 @@
-idade_menor = 0
-idade_maior = 0
-for _ in range(1, 8):
-    idade = int(input('Insira sua idade: '))
-    if idade >= 18:
-        idade_maior = idade_maior + 1
-    else:
-        idade_menor = idade_menor + 1
+from datetime import date
+atual = date.today().year
+totmaior = 0
+totmenor = 0
 
-print(f'Existem {idade_maior} maiores de idade!')
-print(f'E existem {idade_menor} menores de idade!')
+for person in range(1, 8):
+    nasc = int(input(f'Em que ano a {person}ª pessoa nasceu? '))
+    idade = atual - nasc
+    if idade >= 21:
+        totmaior = totmaior + 1
+    else:
+        totmenor = totmenor + 1
+print(f'Ao todo tivemos {totmaior} pessoas maiores de idade.')
+print(f'E tivemos {totmenor} pessoas menores de idade.')

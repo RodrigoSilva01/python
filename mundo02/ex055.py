@@ -1,9 +1,9 @@
 maior = 0
 menor = 0
 
-for c in range(1, 6):
-    peso = float(input('Insira seu peso em kg: '))
-    if c == 1:
+for p in range(1, 6):
+    peso = float(input(f'Insira o peso da {p}ª em kg: '))
+    if p == 1:
         maior = peso
         menor = peso
     else:

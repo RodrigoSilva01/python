@@ -1,3 +1,4 @@
+from time import sleep
 n1 = int(input('Insira um número: '))
 n2 = int(input('Insira outro número: '))
 
@@ -21,7 +22,7 @@ while True:
             print(f'Entre {n1} e {n2} o maior número é {n1}')
         elif n1 < n2:
             print(f'Entre {n1} e {n2} o maior número é {n2}')
-        else:
+        else:        
             print(f'Entre {n1} e {n2} os dois números são iguais')
     elif opcao == 4:
         print('\nInforme novos valores:')
@@ -32,5 +33,5 @@ while True:
         break
     else:
         print('Opção inválida! Tente novamente.')
+    sleep(1)
 print('-' * 20)
-

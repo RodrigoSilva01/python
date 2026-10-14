@@ -1,10 +1,8 @@
-num = 0
-tentativas = 0
-soma = 0
+num = cont = soma = 0 
+num = int(input('Insira um número [999 para parar]: '))
 
 while num != 999:
-    num = int(input('Insira um número: '))
-    if num != 999:
-        tentativas = tentativas + 1
-        soma = soma + num
-print(f'Foram feitas {tentativas} tentativas e a soma deles é de {soma}.')
+    cont = cont + 1
+    soma = soma + num
+    num = int(input('Insira um número [999 para parar]: '))
+print(f'Foram feitas {cont} tentativas e a soma deles é de {soma}.')

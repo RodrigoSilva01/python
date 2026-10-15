@@ -1,27 +1,23 @@
-soma = 0
-quantidade = 0
-num = int(input('Insira um valor (ou 0 para sair): '))
+resp = 'S'
+soma = quantidade = media = maior = menor = 0
 
-if num != 0:
-    maior = num
-    menor = num
-
-    while num != 0:
-        soma = soma + num
-        quantidade = quantidade + 1
-
+while resp in 'Ss':
+    num = int(input('Insira um valor: '))
+    soma = soma + num
+    quantidade = quantidade + 1
+    if quantidade == 1:
+        maior = menor = num
+    else:
         if num > maior:
             maior = num
         if num < menor:
-            menor = num
+            menor = num  
+    resp = str(input('Quer continuar? [S/N]: ')).upper().strip()[0]
+    while resp not in 'SN':
+        resp = str(input('Opção inválida. Tente novamente [S/N]: ')).upper().strip()[0]
+media = soma / quantidade
 
-        num = num = int(input('Insira um valor (ou 0 para sair): '))
-
-    media = soma / quantidade
-
-    print('\n----RESULTADOS----')
-    print(f'Média dos números: {media:.2f}')
-    print(f'maior número digitado: {maior}')
-    print(f'Menor número digitado: {menor}')
-else:
-    print('Nenhum número foi digitado.')
+print('\n----RESULTADOS----')
+print(f'Média dos números: {media:.2f}')
+print(f'maior número digitado: {maior}')
+print(f'Menor número digitado: {menor}')

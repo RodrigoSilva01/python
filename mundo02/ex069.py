@@ -7,9 +7,9 @@ while True:
     idade = int(input('Idade: '))
     sexo = ' '
     while sexo not in 'MF':
-        sexo = str(input('Sexo: [M/F] ')).strip().upper()
+        sexo = str(input('Sexo: [M/F] ')).strip().upper()[0]
 
-    if idade > 18:
+    if idade >= 18:
         maioridade = maioridade + 1
     if sexo == 'M':
         homem = homem + 1
@@ -18,11 +18,11 @@ while True:
 
     continuar = ' '
     while continuar not in 'SN':
-        continuar = str(input('Quer continuar? [S/N] ')).strip().upper()
-
+        continuar = str(input('Quer continuar? [S/N] ')).strip().upper()[0]
+        
     if continuar == 'N':
         break
 
-print(f'Total de pessoas com mais de 18 anos: {maioridade}')
+print(f'\nTotal de pessoas com mais de 18 anos: {maioridade}')
 print(f'Ao todo temos {homem} homem(ns) cadastrados')
 print(f'E temos {mulhersub20} mulher(es) com menos de 20 anos')

@@ -8,23 +8,19 @@ print('-' * 40)
 while True:
     nome = str(input('Nome do produto: '))
     preco = float(input('Preço: R$'))
-    continuar = ' '
     
-    tot_gasto = tot_gasto + preco
     contador = contador + 1
+    tot_gasto = tot_gasto + preco
     
     if preco > 1000:
         sup1000 = sup1000 + 1
-    if contador == 1:
+    if contador == 1 or preco < menor:
         menor = preco
         barato = nome
-    else:
-        if preco < menor:
-            menor = preco
-            barato = nome
-    
+
+    continuar = ' '
     while continuar not in 'SN':
-        continuar = str(input('Quer continuar? [S/N] ')).strip().upper()
+        continuar = str(input('\nQuer continuar? [S/N] ')).strip().upper()[0]
 
     if continuar == 'N':
         break

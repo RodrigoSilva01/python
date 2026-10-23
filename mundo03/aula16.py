@@ -1,0 +1,14 @@
+#lanche = ('Hambúrguer', 'Suco', 'Pizza', 'Pudim')
+
+#for cont in range(0, len(lanche)):
+ #   print(f'Eu vou comer {lanche[cont]} na posiçãoc {cont}')
+
+#for pos, comida in enumerate(lanche):
+#  print(f'Eu vou comer {comida}, na posição {pos}')
+#print('Comi pra caramba!')
+
+a = (4, 3, 5)
+b = (5, 7, 1, 9, 6)
+c = a + b
+
+print(c.count(5))

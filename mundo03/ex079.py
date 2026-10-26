@@ -15,6 +15,6 @@ while True:
     if resp == 'N':
         break
 
-print('-' * 60)
+print('-=' * 30)
 numeros.sort()
 print(f'Você adicionou os valores: {numeros}')

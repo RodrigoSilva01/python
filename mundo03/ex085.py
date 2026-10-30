@@ -4,7 +4,6 @@ valor = 0
 print('-=' * 30)
 print(f'{'NÚMEROS PARES E ÍMPARES':^60}')
 print('-=' * 30)
-
 for c in range(1, 8):
     valor = int(input(f'Insira o {c}º valor: '))
 

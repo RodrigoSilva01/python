@@ -2,9 +2,9 @@ from random import randint
 from time import sleep
 jogos = []
 lista = []
-print('-=' * 15)
-print(f'{'JOGO DA MEGA SENA':^30}')
-print('-=' * 15)
+print('-' * 30)
+print(f'{'    JOGO DA MEGA SENA    ':^30}')
+print('-' * 30)
 
 quant = int(input('Quantos jogos você que eu sorteie? '))
 tot = 1
@@ -23,10 +23,9 @@ while tot <= quant:
     lista.clear()
     tot = tot + 1
 
-print('-=' * 3, f'SORTEANDO {quant} JOGOS ', '-=' * 3)
+print('-=' * 3, f' SORTEANDO {quant} JOGOS ', '-=' * 3)
 
 for i, l in enumerate(jogos):
     print(f'Jogo {i+1}: {l}')
     sleep(1)
-
-print('-=' * 3, f' < BOA SORTE > ', '-=' * 3)
+print('-=' * 5, f' < BOA SORTE! > ', '-=' * 5)
